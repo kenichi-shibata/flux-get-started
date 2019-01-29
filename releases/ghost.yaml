@@ -5,7 +5,7 @@ metadata:
   name: ghost
   namespace: demo
   annotations:
-    flux.weave.works/automated: "false"
+    flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:1.25.*
 spec:
   releaseName: ghost
