@@ -5,7 +5,7 @@ We published a step-by-step run-through on how to use Flux and Helm Operator
 * [Kubectl details about fluxctl](https://github.com/weaveworks/flux/blob/master/site/fluxctl.md)
 * [Annotations](https://github.com/weaveworks/flux/blob/master/site/annotations-tutorial.md)
 * [Walkthrough podinfo](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/1-deploy.md)
-
+* [More example how to structure cluster repo](https://github.com/stefanprodan/gitops-helm/)
 ### Workloads
 
 podinfo
