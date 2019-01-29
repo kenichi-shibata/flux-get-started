@@ -1,7 +1,9 @@
 # flux-get-started
 
-We published a step-by-step run-through on how to use Flux and Helm Operator [over
-here](https://github.com/weaveworks/flux/blob/master/site/helm-get-started.md).
+We published a step-by-step run-through on how to use Flux and Helm Operator
+* [Helm getting started](https://github.com/weaveworks/flux/blob/master/site/helm-get-started.md).
+* [Kubectl details about fluxctl](https://github.com/weaveworks/flux/blob/master/site/fluxctl.md)
+* [Annotations](https://github.com/weaveworks/flux/blob/master/site/annotations-tutorial.md)
 
 ### Workloads
 
