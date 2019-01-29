@@ -1,0 +1,1 @@
+{"jobID":"9e0a3920-c8bf-f854-6988-549f3efe3822","spec":{"type":"policy","cause":{"Message":"","User":"Kenichi Shibata \u003ckenichi.shibata@bglgroup.co.uk\u003e"},"spec":{"demo:helmrelease/ghost":{"add":{"tag_all":"semver:1.25.*"},"remove":{}}}},"result":null}
