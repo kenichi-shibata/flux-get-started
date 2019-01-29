@@ -1,0 +1,1 @@
+{"jobID":"23a89012-e729-3fae-0e82-d56a5b6eb6c8","spec":{"type":"policy","cause":{"Message":"","User":"Kenichi Shibata \u003ckenichi.shibata@bglgroup.co.uk\u003e"},"spec":{"demo:deployment/podinfo":{"add":{"tag.init":"glob:3.*","tag.podinfod":"semver:^1.2.0"},"remove":{}}}},"result":null}
