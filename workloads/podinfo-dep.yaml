@@ -9,7 +9,7 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.init: glob:3.*
-    flux.weave.works/tag.podinfod: semver:~1.2.0
+    flux.weave.works/tag.podinfod: glob:master-*
 spec:
   strategy:
     rollingUpdate:
