@@ -9,7 +9,7 @@ Some related topics
 * [Walkthrough podinfo](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/1-deploy.md)
 * [Prometheus HPA](https://github.com/stefanprodan/k8s-prom-hpa)
 * [More example how to structure cluster repo](https://github.com/stefanprodan/gitops-helm/)
-* [Flagger Canary](https://docs.flagger.app/install/install-istio_
+* [Flagger Canary](https://docs.flagger.app/install/install-istio)
 ### Workloads
 
 podinfo
