@@ -33,7 +33,7 @@ spec:
         - "1"
       containers:
       - name: podinfod
-        image: stefanprodan/podinfo:1.2.1
+        image: stefanprodan/podinfo:master-a9a1252
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9898
