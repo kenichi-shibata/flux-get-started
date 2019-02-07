@@ -92,6 +92,9 @@ flux_list_workloads:
 ghost_portforward:
 	kubectl port-forward deployments/ghost-ghost 2368 -n demo
 
+podinfo_portforward:
+	kubectl port-forward deployments/podinfo 9898 -n demo
+
 ghost_password:
 	kubectl get secret -o=jsonpath={.data.ghost-password} ghost-ghost -n demo | base64 -D | pbcopy
 
