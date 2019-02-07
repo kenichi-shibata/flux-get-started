@@ -37,6 +37,7 @@ helm_install_flux: check_env github_user
 	--set helmOperator.create=true \
 	--set helmOperator.createCRD=false \
 	--set git.url=git@github.com:$(GITHUB_USER)/flux-get-started \
+	--set git.pollInterval=1m \
 	--set git.branch=master \
 	--set registry.pollInterval=2m \
 	--namespace flux \
