@@ -55,8 +55,9 @@ helm_flux_logs: check_env
 
 # Add the flux user to the git user with write access to the cluster_repo
 flux_identity: check_env github_user
-	fluxctl identity $(NS_FLAGS)
-	echo -e "set this in \n https://github.com/$(GITHUB_USER)flux-get-started/settings/keys/new"
+	fluxctl identity $(NS_FLAGS) | pbcopy
+	@echo
+	@open https://github.com/$(GITHUB_USER)/flux-get-started/settings/keys/new
 
 # List all images cached by the fluxctl 
 flux_list_images_all:
@@ -86,3 +87,5 @@ clean:
 	helm delete --purge flux
 	helm delete --purge mongodb 
 	helm delete --purge redis
+	helm delete --purge ghost
+	kubectl delete -f workloads/
