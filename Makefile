@@ -1,9 +1,9 @@
 .PHONY: clean helm_install_tiller helm_repo_add helm_install_flux_crd helm_install_flux
 
 check_env:
-	which git &> /dev/null || (echo "please install git"; exit 1)
-	which helm &> /dev/null || (echo "please install helm"; exit 1)
-	which kubectl &> /dev/null || (echo "please install kubectl"; exit 1)
+	@which git &> /dev/null || (echo "please install git"; exit 1)
+	@which helm &> /dev/null || (echo "please install helm"; exit 1)
+	@which kubectl &> /dev/null || (echo "please install kubectl"; exit 1)
 
 github_user:
 ifndef GITHUB_USER
@@ -11,7 +11,7 @@ ifndef GITHUB_USER
 endif
 
 helm_install_tiller: check_env
-	kubectl -n kube-system create serviceaccount tiller \
+	kubectl -n kube-system create serviceaccount tiller 
 	kubectl create clusterrolebinding tiller-cluster-rule \
     --clusterrole=cluster-admin \
     --serviceaccount=kube-system:tiller \
@@ -28,6 +28,7 @@ helm_install_flux: check_env github_user
 	--set helmOperator.create=true \
 	--set helmOperator.createCRD=false \
 	--set git.url=git@github.com:$(GITHUB_USER)/flux-get-started \
+  --set registry.pollInterval=2m \
 	--namespace flux \
 	weaveworks/flux
 
