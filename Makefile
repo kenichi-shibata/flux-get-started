@@ -37,7 +37,8 @@ helm_install_flux: check_env github_user
 	--set helmOperator.create=true \
 	--set helmOperator.createCRD=false \
 	--set git.url=git@github.com:$(GITHUB_USER)/flux-get-started \
-  --set registry.pollInterval=2m \
+	--set git.branch=master \
+	--set registry.pollInterval=2m \
 	--namespace flux \
 	weaveworks/flux
 
@@ -83,3 +84,5 @@ flux_policy_update:
 
 clean:
 	helm delete --purge flux
+	helm delete --purge mongodb 
+	helm delete --purge redis
