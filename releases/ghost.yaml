@@ -6,7 +6,7 @@ metadata:
   namespace: demo
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: semver:1.27.*
+    flux.weave.works/tag.chart-image: glob:1.21.*
 spec:
   releaseName: ghost
   chart:
@@ -20,7 +20,7 @@ spec:
     resources:
       requests:
         memory: 32Mi
-        cpu: 20m
+        cpu: 10m
     serviceType: ClusterIP
     mariadb:
       persistence:
