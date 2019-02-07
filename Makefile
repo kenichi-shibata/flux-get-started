@@ -39,7 +39,7 @@ helm_install_flux: check_env github_user
 	--set git.url=git@github.com:$(GITHUB_USER)/flux-get-started \
 	--set git.pollInterval=1m \
 	--set git.branch=master \
-	--set registry.pollInterval=2m \
+	--set registry.pollInterval=1m \
 	--namespace flux \
 	weaveworks/flux
 
