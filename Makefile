@@ -59,6 +59,9 @@ flux_identity: check_env github_user
 	@echo
 	@open https://github.com/$(GITHUB_USER)/flux-get-started/settings/keys/new
 
+flux_sync: check_env github_user
+	fluxctl sync $(NS_FLAGS)
+
 # List all images cached by the fluxctl 
 flux_list_images_all:
 	fluxctl list-images $(NS_FLAGS)
