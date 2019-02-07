@@ -20,8 +20,8 @@ helm_install_tiller: check_env
 	kubectl -n kube-system create serviceaccount tiller 
 	kubectl create clusterrolebinding tiller-cluster-rule \
     --clusterrole=cluster-admin \
-    --serviceaccount=kube-system:tiller \
-	helm init --skip-refresh --upgrade --service--accout --tiller
+    --serviceaccount=kube-system:tiller
+	helm init --service-account tiller 
 
 # Add the helm repo where the flux chart exists
 helm_repo_add: check_env
@@ -86,9 +86,21 @@ flux_release_update_image:
 flux_policy_update:
 	fluxctl policy $(NS_FLAGS) $(CONTROLLER_FLAGS) $(POLICY_FLAGS)
 
+flux_list_workloads:
+	fluxctl list-workloads -a $(NS_FLAGS) 
+
+ghost_portforward:
+	kubectl port-forward deployments/ghost-ghost 2368 -n demo
+
+ghost_password:
+	kubectl get secret -o=jsonpath={.data.ghost-password} ghost-ghost -n demo | base64 -D | pbcopy
+
 clean:
 	helm delete --purge flux
 	helm delete --purge mongodb 
 	helm delete --purge redis
 	helm delete --purge ghost
 	kubectl delete -f workloads/
+	kubectl delete sa tiller -n kube-system
+	kubectl delete clusterrolebinding tiller-cluster-rule
+	kubectl delete -f https://raw.githubusercontent.com/weaveworks/flux/master/deploy-helm/flux-helm-release-crd.yaml
