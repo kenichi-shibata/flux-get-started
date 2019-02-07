@@ -19,11 +19,6 @@ podinfo
 
 ### Helm releases
 
-Mongodb
-* Source: Helm repository (stable)
-* Kubernetes deployment
-* automated image updates (semantic versioning filter)
-
 Redis
 * Source: Helm repository (stable)
 * Kubernetes stateful set 
