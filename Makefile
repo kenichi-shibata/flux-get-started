@@ -101,7 +101,6 @@ ghost_password:
 
 clean:
 	helm delete --purge flux
-	helm delete --purge mongodb 
 	helm delete --purge redis
 	helm delete --purge ghost
 	kubectl delete -f workloads/
