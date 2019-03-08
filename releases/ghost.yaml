@@ -17,7 +17,7 @@ spec:
     image: bitnami/ghost:1.24.9
     persistence:
       enabled: false
-    ghostUsername: kenichi
+    ghostUsername: kenichi@shibata.co.uk
     resources:
       requests:
         memory: 32Mi
