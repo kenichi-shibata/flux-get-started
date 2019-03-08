@@ -17,6 +17,7 @@ spec:
     image: bitnami/ghost:1.24.9
     persistence:
       enabled: false
+    ghostUsername: kenichi
     resources:
       requests:
         memory: 32Mi
