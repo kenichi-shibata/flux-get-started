@@ -14,7 +14,7 @@ spec:
     ref: master
     path: charts/ghost
   values:
-    image: bitnami/ghost:1.22.7
+    image: bitnami/ghost:1.24.9
     persistence:
       enabled: false
     ghostUsername: kenichi@shibata.co.uk
