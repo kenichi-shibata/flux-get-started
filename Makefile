@@ -99,11 +99,18 @@ podinfo_portforward:
 ghost_password:
 	kubectl get secret -o=jsonpath={.data.ghost-password} ghost-ghost -n demo | base64 -D | pbcopy
 
+watch_pods:
+	watch kubectl get pods -n demo 
+
+watch_logs:
+	kubectl logs deployments/flux -n flux -f
+
 clean:
-	helm delete --purge flux
-	helm delete --purge redis
-	helm delete --purge ghost
-	kubectl delete -f workloads/
-	kubectl delete sa tiller -n kube-system
-	kubectl delete clusterrolebinding tiller-cluster-rule
+	#kubectl delete sa tiller -n kube-system
+	#kubectl delete clusterrolebinding tiller-cluster-rule
+	#kubectl delete deployment tiller-deploy -n kube-system
+	#helm delete --purge flux 
+	#helm delete --purge redis
+	#helm delete --purge ghost
+	#kubectl delete -f workloads/
 	kubectl delete -f https://raw.githubusercontent.com/weaveworks/flux/master/deploy-helm/flux-helm-release-crd.yaml
