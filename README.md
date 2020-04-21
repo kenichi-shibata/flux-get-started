@@ -1,9 +1,14 @@
 # flux-get-started
 
+Start here
+* [Helm based](https://github.com/fluxcd/flux/blob/master/docs/tutorials/get-started-helm.md)
+* [Kustomized Based](https://github.com/fluxcd/flux/blob/master/docs/tutorials/get-started-kustomize.md)
+* [Kubectl Native based](https://github.com/fluxcd/flux/blob/master/docs/tutorials/get-started.md)
+
 We published a step-by-step run-through on how to use Flux and Helm Operator
-* [Helm getting started](https://github.com/weaveworks/flux/blob/master/site/helm-get-started.md).
-* [Kubectl details about fluxctl](https://github.com/weaveworks/flux/blob/master/site/fluxctl.md)
-* [Annotations](https://github.com/weaveworks/flux/blob/master/site/annotations-tutorial.md)
+* [Helm getting started](https://github.com/fluxcd/flux/blob/master/docs/references/helm-operator-integration.md).
+* [Kubectl details about fluxctl](https://github.com/fluxcd/flux/blob/master/docs/references/fluxctl.md)
+* [Annotations](https://docs.fluxcd.io/en/1.19.0/references/helm-operator-integration/#annotations)
 
 Some related topics 
 * [Walkthrough podinfo](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/1-deploy.md)
